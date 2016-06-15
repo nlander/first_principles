@@ -1,0 +1,106 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-12 06:54:06.4933 UTC
+
+interface divis_383lyAwimmM8tDCaie5nHe:Division 7102
+  interface hash: 95a4a99b5291ae6100b6e31679b5d526
+  ABI hash: 256daf8aaf2816e9cffca9589dcf871a
+  export-list hash: 090d23ea1f78cb1084b8274c7e582faa
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1177ed9910be22cb08b17094c1021b20
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Division.dividedBy
+  Division.multRec
+  Division.sayHello
+module dependencies:
+package dependencies: base-4.8.1.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Monoid
+                         base-4.8.1.0:Data.Type.Equality base-4.8.1.0:GHC.Generics
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.1.0:GHC.Real 4c3b525ecbd4d62bb287aec36d4c2f0d
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  base-4.8.1.0:System.IO d541b8bdf18c04de3ab7ea0277c4eba3
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+cda70b94a248af08660b24335f4c3262
+  $wdividedBy :: GHC.Real.Integral a => a -> a -> (# a, a #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLLLLLL),1*U(1*U,A,A,A,A,A,A,A,A)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a w :: GHC.Real.Integral a w1 :: a w2 :: a ->
+                 let {
+                   $dReal :: GHC.Real.Real a = GHC.Real.$p1Integral @ a w
+                 } in
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Real @ a $dReal
+                 } in
+                 let {
+                   lvl :: a = GHC.Num.fromInteger @ a $dNum Division.dividedBy2
+                 } in
+                 let {
+                   $dOrd :: GHC.Classes.Ord a = GHC.Real.$p2Real @ a $dReal
+                 } in
+                 letrec {
+                   $wgo :: a -> a -> a -> (# a, a #)
+                     {- Arity: 3, Strictness: <L,U><L,U><L,U>, Inline: [0] -}
+                   = \ w3 :: a w4 :: a w5 :: a ->
+                     case GHC.Classes.< @ a $dOrd w3 w4 of wild {
+                       GHC.Types.False
+                       -> $wgo (GHC.Num.- @ a $dNum w3 w4) w4 (GHC.Num.+ @ a $dNum w5 lvl)
+                       GHC.Types.True -> (# w5, w3 #) }
+                 } in
+                 $wgo w1 w2 (GHC.Num.fromInteger @ a $dNum Division.dividedBy1)) -}
+0a2c73506bfa65224af43914380a8434
+  dividedBy :: GHC.Real.Integral a => a -> a -> (a, a)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLLLLLL),1*U(1*U,A,A,A,A,A,A,A,A)><L,U><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a w :: GHC.Real.Integral a w1 :: a w2 :: a ->
+                 case Division.$wdividedBy @ a w w1 w2 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+381b85c6a825575daa906d01cf5dc265
+  dividedBy1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 0) -}
+f0a8b603842c29dfe717aa3cfd63cb4a
+  dividedBy2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 1) -}
+1ce45de5faa1e0edc109ec55fe0167b8
+  multRec ::
+    (GHC.Classes.Ord a, GHC.Classes.Eq a, GHC.Num.Num a) => a -> a -> a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U(A,A,C(C1(U)),A,A,A,A,A)><S(C(C(S))L),U(C(C1(U)),A)><S,U(C(C1(U)),C(C1(U)),A,C(U),C(U),A,C(U))><L,U><L,U> -}
+17b359af483a979bdff3ed5822cb633d
+  sayHello :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Division.sayHello1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+f50a0cbff3e800c920ce276ac8bc233b
+  sayHello1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Division.sayHello2
+                   GHC.Types.True
+                   eta) -}
+3da421aa6e30ad3f75e711c7105ea4ea
+  sayHello2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hello!"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,140 @@
+
+==================== FINAL INTERFACE ====================
+2016-02-21 22:26:57.484734 UTC
+
+interface gener_4AM9kDv3NocJXQq133gTiH:Generator 7102
+  interface hash: b0f9d99a3cb5e2d834e4822b789af11b
+  ABI hash: 5179c275fe4f29f6db942fa0e3b74eb3
+  export-list hash: e8f54791736ed3cf567e7356fe9e43f5
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1177ed9910be22cb08b17094c1021b20
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Generator.Fool{Generator.Frue Generator.Fulse}
+module dependencies:
+package dependencies: base-4.8.1.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Monoid
+                         base-4.8.1.0:Data.Type.Equality base-4.8.1.0:GHC.Generics
+import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+9f0d2614cf63006d46b3b82c1defab23
+  $fEqFool :: GHC.Classes.Eq Generator.Fool
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Generator.Fool Generator.$fEqFool_$c== Generator.$fEqFool_$c/= -}
+9f0d2614cf63006d46b3b82c1defab23
+  $fEqFool_$c/= :: Generator.Fool -> Generator.Fool -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Generator.Fool b :: Generator.Fool ->
+                 case a of wild {
+                   Generator.Fulse
+                   -> case b of wild1 {
+                        Generator.Fulse -> GHC.Types.False
+                        Generator.Frue -> GHC.Types.True }
+                   Generator.Frue
+                   -> case b of wild1 {
+                        Generator.Fulse -> GHC.Types.True
+                        Generator.Frue -> GHC.Types.False } }) -}
+9f0d2614cf63006d46b3b82c1defab23
+  $fEqFool_$c== :: Generator.Fool -> Generator.Fool -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Generator.Fool ds1 :: Generator.Fool ->
+                 case ds of wild {
+                   Generator.Fulse
+                   -> case ds1 of wild1 {
+                        Generator.Fulse -> GHC.Types.True
+                        Generator.Frue -> GHC.Types.False }
+                   Generator.Frue
+                   -> case ds1 of wild1 {
+                        Generator.Fulse -> GHC.Types.False
+                        Generator.Frue -> GHC.Types.True } }) -}
+9f0d2614cf63006d46b3b82c1defab23
+  $fShowFool :: GHC.Show.Show Generator.Fool
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Generator.Fool
+                  Generator.$fShowFool_$cshowsPrec
+                  Generator.$fShowFool_$cshow
+                  Generator.$fShowFool_$cshowList -}
+9f0d2614cf63006d46b3b82c1defab23
+  $fShowFool1 :: Generator.Fool -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Generator.Fool eta :: GHC.Base.String ->
+                 case ds of wild {
+                   Generator.Fulse
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Generator.$fShowFool3)
+                        eta
+                   Generator.Frue
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Generator.$fShowFool2)
+                        eta }) -}
+61de477c44fbd63259eb01a0f38592a8
+  $fShowFool2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Frue"#) -}
+9d967058d1f9aecb32ea68f20a9cbf52
+  $fShowFool3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Fulse"#) -}
+9f0d2614cf63006d46b3b82c1defab23
+  $fShowFool_$cshow :: Generator.Fool -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Generator.Fool ->
+                 case x of wild {
+                   Generator.Fulse -> Generator.$fShowFool3
+                   Generator.Frue -> Generator.$fShowFool2 }) -}
+9f0d2614cf63006d46b3b82c1defab23
+  $fShowFool_$cshowList :: [Generator.Fool] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Generator.Fool
+                   Generator.$fShowFool1) -}
+9f0d2614cf63006d46b3b82c1defab23
+  $fShowFool_$cshowsPrec ::
+    GHC.Types.Int -> Generator.Fool -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ ds :: GHC.Types.Int
+                   ds1 :: Generator.Fool
+                   eta :: GHC.Base.String ->
+                 case ds1 of wild {
+                   Generator.Fulse
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Generator.$fShowFool3)
+                        eta
+                   Generator.Frue
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Generator.$fShowFool2)
+                        eta }) -}
+9f0d2614cf63006d46b3b82c1defab23
+  data Fool = Fulse | Frue
+    Promotable
+instance GHC.Classes.Eq [Generator.Fool] = Generator.$fEqFool
+instance GHC.Show.Show [Generator.Fool] = Generator.$fShowFool
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

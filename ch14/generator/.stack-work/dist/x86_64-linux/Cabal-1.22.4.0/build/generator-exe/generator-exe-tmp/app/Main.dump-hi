@@ -1,0 +1,64 @@
+
+==================== FINAL INTERFACE ====================
+2016-02-21 22:29:50.060647 UTC
+
+interface main@main:Main 7102
+  interface hash: e4c485c4edb316c2acbbe6dd02f369b4
+  ABI hash: eff369d85a53c9bd6dc9283599f6e4dc
+  export-list hash: c987cfff2804df289d4de89bf4e54c56
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: febb0c4a8cde9e77e7e93524ab6a23b3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: base-4.8.1.0*
+                      generator-0.1.0.0@gener_4AM9kDv3NocJXQq133gTiH ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Monoid
+                         base-4.8.1.0:Data.Type.Equality base-4.8.1.0:GHC.Generics
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  base-4.8.1.0:System.IO d541b8bdf18c04de3ab7ea0277c4eba3
+import  -/  generator-0.1.0.0@gener_4AM9kDv3NocJXQq133gTiH:Generator 5179c275fe4f29f6db942fa0e3b74eb3
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+a5d37d34a74abea118f1ed51ee19cb84
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+47338cd321cb61b3a3881a4762b87e83
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Generator.$fShowFool3
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Generator.$fShowFool2
+                   GHC.Types.True
+                   ipv }) -}
+b03bd102c4b249046295bffe548a9b5c
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

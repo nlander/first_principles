@@ -1,0 +1,165 @@
+
+==================== FINAL INTERFACE ====================
+2016-02-21 22:34:11.491799 UTC
+
+interface main@main:Main 7102
+  interface hash: 6644101fbffaaa794ce729d03130c9b3
+  ABI hash: 0577ea08b5d325685de7e0960ab3c608
+  export-list hash: c71cdc1b55fb4902391e0d1ecfd99ca5
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 762ab2c4766e2cc5cef1bf0e51a759d4
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.equalChances
+  Main.main
+  Main.skewedChances
+module dependencies:
+package dependencies: QuickCheck-2.8.1@Quick_BnZKeqxVf7FCbnejbqAnPL
+                      array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ base-4.8.1.0*
+                      containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o
+                      generator-0.1.0.0@gener_4AM9kDv3NocJXQq133gTiH ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 pretty-1.1.2.0@prett_7UQTOB05U7lIYPkFOVraeR
+                      primitive-0.6.1.0@primi_5Jnw7oEuYtM9dmKXelGXVb
+                      random-1.1@rando_1z8Ujelqc6aKgvPnbRUKkP template-haskell-2.10.0.0
+                      tf-random-0.5@tfran_28prfR75qTK8HkPsc02Mdm
+                      time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH
+                      transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Format.Parse
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X:Control.Monad.Trans.Error
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+                         pretty-1.1.2.0@prett_7UQTOB05U7lIYPkFOVraeR:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_5Jnw7oEuYtM9dmKXelGXVb:Control.Monad.Primitive
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.8.1@Quick_BnZKeqxVf7FCbnejbqAnPL:Test.QuickCheck 56c452ad8c9684c4a3ff945aba05abd7
+import  -/  QuickCheck-2.8.1@Quick_BnZKeqxVf7FCbnejbqAnPL:Test.QuickCheck.Gen eb8685919db3fea4d81cf795f8b21544
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  generator-0.1.0.0@gener_4AM9kDv3NocJXQq133gTiH:Generator 5179c275fe4f29f6db942fa0e3b74eb3
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+aff21934d646fedca14c7462a5e09923
+  equalChances :: Test.QuickCheck.Gen.Gen Generator.Fool
+  {- Unfolding: (Test.QuickCheck.Gen.elements
+                   @ Generator.Fool
+                   Main.equalChances1) -}
+cce55dbb2a58903a82aa12ba5d6d7d12
+  equalChances1 :: [Generator.Fool]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ Generator.Fool
+                   Generator.Fulse
+                   Main.equalChances2) -}
+292625f87fa9ff94ac7debc7bce7d1d3
+  equalChances2 :: [Generator.Fool]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ Generator.Fool
+                   Generator.Frue
+                   (GHC.Types.[] @ Generator.Fool)) -}
+d04b3c53e6f2e571cd089fa556ab2ea0
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+73fcf9b05e7192ae447100d55334c462
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Test.QuickCheck.Gen.sample1
+                        @ Generator.Fool
+                        Generator.$fShowFool
+                        Main.equalChances
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 Test.QuickCheck.Gen.sample1
+                   @ Generator.Fool
+                   Generator.$fShowFool
+                   Main.skewedChances
+                   ipv }) -}
+7bea9978a9f954e00cb8ebb8190df3e6
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+0be67767f036bd5e5d5858afc6db57c1
+  skewedChances :: Test.QuickCheck.Gen.Gen Generator.Fool
+  {- Unfolding: (Test.QuickCheck.Gen.frequency
+                   @ Generator.Fool
+                   Main.skewedChances1) -}
+bc39c11f15bffbbe02b15c27e54965a8
+  skewedChances1 ::
+    [(GHC.Types.Int, Test.QuickCheck.Gen.Gen Generator.Fool)]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, Test.QuickCheck.Gen.Gen Generator.Fool)
+                   Main.skewedChances6
+                   Main.skewedChances2) -}
+a7ccccd530957854ab0cd0fa3862cdf0
+  skewedChances2 ::
+    [(GHC.Types.Int, Test.QuickCheck.Gen.Gen Generator.Fool)]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, Test.QuickCheck.Gen.Gen Generator.Fool)
+                   Main.skewedChances3
+                   (GHC.Types.[]
+                      @ (GHC.Types.Int, Test.QuickCheck.Gen.Gen Generator.Fool))) -}
+17e858eb46a68aaf2a61956b1f616937
+  skewedChances3 ::
+    (GHC.Types.Int, Test.QuickCheck.Gen.Gen Generator.Fool)
+  {- HasNoCafRefs,
+     Unfolding: ((Main.skewedChances5,
+                  Main.skewedChances4
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.NTCo:Gen[0] <Generator.Fool>_R)))) -}
+d4a74a8c6774ee52016463fdac504471
+  skewedChances4 ::
+    Test.QuickCheck.Random.QCGen -> GHC.Types.Int -> Generator.Fool
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ ds :: Test.QuickCheck.Random.QCGen
+                   ds1 :: GHC.Types.Int ->
+                 Generator.Frue) -}
+8b747eb9737b16ab98d0b49ba6f2d8bc
+  skewedChances5 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 1) -}
+d204ff0c2932d4b2b74e834bd07eafe2
+  skewedChances6 ::
+    (GHC.Types.Int, Test.QuickCheck.Gen.Gen Generator.Fool)
+  {- HasNoCafRefs,
+     Unfolding: ((Main.skewedChances8,
+                  Main.skewedChances7
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.NTCo:Gen[0] <Generator.Fool>_R)))) -}
+4a3907700317a84c94e43db5265b903d
+  skewedChances7 ::
+    Test.QuickCheck.Random.QCGen -> GHC.Types.Int -> Generator.Fool
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ ds :: Test.QuickCheck.Random.QCGen
+                   ds1 :: GHC.Types.Int ->
+                 Generator.Fulse) -}
+6a72db29006f6073a23792160aa7ae6c
+  skewedChances8 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

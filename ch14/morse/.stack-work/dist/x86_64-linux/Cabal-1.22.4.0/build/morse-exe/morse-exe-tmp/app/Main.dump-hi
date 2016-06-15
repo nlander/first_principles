@@ -1,0 +1,131 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-12 19:39:28.353367 UTC
+
+interface main@main:Main 7102
+  interface hash: 42d863717efba5a7dd5f97c7dec0f455
+  ABI hash: 11142b43a792914855a2bebf5269f2eb
+  export-list hash: 034f1dc103d178a039e843a474d06fbe
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 86b144cf510159f952ba71481ed4ec75
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.convertFromMorse
+  Main.convertToMorse
+  Main.main
+module dependencies:
+package dependencies: array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ
+                      base-4.8.1.0* containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 morse-0.1.0.0@morse_DOv10sjTwzK7X2dpL1LJqw
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+import  -/  base-4.8.1.0:Control.Monad dfea142d91349c4861427789d50d5b80
+import  -/  base-4.8.1.0:Data.List 2a4f5f92892d432e7113f64cd9dcca53
+import  -/  base-4.8.1.0:Data.OldList 21f46c368c20a00483b41333e53a55cb
+import  -/  base-4.8.1.0:Data.Traversable 89769555cf5e62f4edd3d085405c2caa
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.IO.Handle fda05b0a879e69b0b19e31645e2a560c
+import  -/  base-4.8.1.0:GHC.IO.Handle.FD 54084174c7327478f2d75bda2d43d4a9
+import  -/  base-4.8.1.0:GHC.IO.Handle.Text ad03cb260078f569197eef288a99a983
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  base-4.8.1.0:System.Environment 946ddc2d7c48138bb213316abaff2a8d
+import  -/  base-4.8.1.0:System.Exit 667ccf9b7fe125c4036efb58a244974a
+import  -/  base-4.8.1.0:System.IO d541b8bdf18c04de3ab7ea0277c4eba3
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  morse-0.1.0.0@morse_DOv10sjTwzK7X2dpL1LJqw:Morse 611fa36984509e269073cb87aaa0a29c
+e1c193b6198e8dcf42d88e92e8e98281
+  convertFromMorse :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.convertFromMorse1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+6ef5ea2adc80652026233ff6a256f4f0
+  convertFromMorse1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U> -}
+54d2c93ba026acea8fe8c74f859872d9
+  convertToMorse :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.convertToMorse1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+6473bb0ef1c8870fb4129d378fc4146b
+  convertToMorse1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U> -}
+f85e162dc9fd7b8d2d064254db0bc355
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+3428a4c7888b969ccb35c60cf1b32963
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   []
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main4
+                        GHC.Types.True
+                        ipv
+                   : arg ds
+                   -> case ds of wild1 {
+                        []
+                        -> case GHC.Base.eqString arg Main.main3 of wild2 {
+                             GHC.Types.False
+                             -> case GHC.Base.eqString arg Main.main2 of wild3 {
+                                  GHC.Types.False
+                                  -> GHC.IO.Handle.Text.hPutStr2
+                                       GHC.IO.Handle.FD.stdout
+                                       Main.main4
+                                       GHC.Types.True
+                                       ipv
+                                  GHC.Types.True -> Main.convertToMorse1 ipv }
+                             GHC.Types.True -> Main.convertFromMorse1 ipv }
+                        : ipv2 ipv3
+                        -> GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             Main.main4
+                             GHC.Types.True
+                             ipv } } }) -}
+4fdcdef0502b9b24f5f0de5c2f16cecf
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "to"#) -}
+3b7ec65d95c0b0f5f2f1cad935917520
+  main3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "from"#) -}
+20a0970f91dde4a6e480226d228fbee9
+  main4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Please specify the first argument as being 'from' or 'to' morse, such as: morse to"#) -}
+afe63a4f95f2542f8406a73dada9e167
+  main5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
