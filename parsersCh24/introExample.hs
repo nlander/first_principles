@@ -1,3 +1,4 @@
+{-# LANGUAGE NoMonomorphismRestriction #-}
 module LearnParsers where
 
 import Text.Trifecta
