@@ -8,13 +8,13 @@ stop = unexpected "stop"
 
 one = char '1' <* eof
 
-one' = one *> stop
+one' = one <* stop
 
 oneTwo = char '1' *> char '2'
 
 oneTwo' = char '1' *> char '2' <* stop
 
-testParse :: Parser Char -> IO ()
+testParse :: Show a => Parser a -> IO ()
 testParse p =
   print $ parseString p mempty "123"
 
