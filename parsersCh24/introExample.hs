@@ -9,10 +9,12 @@ stop = unexpected "stop"
 
 one = char '1' <* eof
 
+one' :: Show a => Parser a
 one' = one <* stop
 
 oneTwo = char '1' *> char '2'
 
+oneTwo' :: Show a => Parser a
 oneTwo' = char '1' *> char '2' <* stop
 
 testParse :: Show a => Parser a -> IO ()
