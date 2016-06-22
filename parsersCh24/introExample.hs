@@ -4,7 +4,7 @@ module LearnParsers where
 import Text.Trifecta
 import Control.Applicative
 
-stop :: Parser a
+stop :: Show a => Parser a
 stop = unexpected "stop"
 
 one = char '1' <* eof
