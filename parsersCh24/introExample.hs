@@ -4,17 +4,15 @@ module LearnParsers where
 import Text.Trifecta
 import Control.Applicative
 
-stop :: Show a => Parser a
+stop :: Parser a
 stop = unexpected "stop"
 
 one = char '1' <* eof
 
-one' :: Parser Char
 one' = one <* stop
 
 oneTwo = char '1' *> char '2'
 
-oneTwo' :: Parser Char
 oneTwo' = char '1' *> char '2' <* stop
 
 testParse :: Show a => Parser a -> IO ()
@@ -26,7 +24,7 @@ pNL s =
 
 main = do
   pNL "stop:"
-  testParse stop
+  testParse (stop :: Parser Char)
   pNL "one:"
   testParse one
   pNL "one':"
