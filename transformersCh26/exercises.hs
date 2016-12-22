@@ -1,14 +1,38 @@
+import Control.Monad.Trans.Except (ExceptT (..), runExceptT)
+import Control.Monad.Trans.Class
+import Control.Monad.IO.Class
+import Control.Monad
+
 newtype MaybeT m a =
   MaybeT { runMaybeT :: m (Maybe a) }
 
+instance Functor m => Functor (MaybeT m) where
+  fmap f = MaybeT . (fmap . fmap) f . runMaybeT
+
+instance Applicative m => Applicative (MaybeT m) where
+  pure = MaybeT . pure . Just
+  (MaybeT mmab) <*> (MaybeT mma) = MaybeT $ (<*>) <$> mmab <*> mma
+
+instance Monad m => Monad (MaybeT m) where
+  return = pure
+  (MaybeT ma) >>= f = MaybeT $ ma >>= \maybe -> case maybe of
+                                                  Nothing -> return Nothing
+                                                  (Just a) -> ( runMaybeT . f ) a
+
+instance MonadIO m => MonadIO (MaybeT m) where
+  liftIO io = MaybeT . ( fmap Just ) . liftIO $ io
+
 newtype EitherT e m a =
   EitherT { runEitherT :: m (Either e a) }
+
+instance MonadTrans ( EitherT e ) where
+  lift = EitherT . liftM Right
 
 instance Functor m => Functor (EitherT e m) where
   fmap f = EitherT . (fmap . fmap) f . runEitherT
 
 instance Applicative m => Applicative (EitherT e m) where
-  pure = EitherT . pure . pure
+  pure = EitherT . pure . Right
   (EitherT fab) <*> (EitherT mma) = EitherT $ (<*>) <$> fab <*> mma
 
 instance Monad m => Monad (EitherT e m) where
@@ -50,6 +74,9 @@ instance Monad m => Monad (ReaderT r m) where
   return = pure
   (ReaderT frma) >>= farmb = ReaderT ( \r -> frma r >>= ( \a -> ( (runReaderT . farmb) a ) r ) )
 
+instance MonadIO m => MonadIO (ReaderT r m) where
+  liftIO = ReaderT . const . liftIO
+
 newtype StateT s m a =
   StateT { runStateT :: s -> m (a, s) }
 
@@ -73,3 +100,17 @@ instance Monad m => Monad (StateT s m) where
   return = pure
   (StateT fsmas) >>= fasmbs = 
     StateT $ ( \s -> fsmas s >>= ( \(a,s0) -> (runStateT . fasmbs) a s0 ) )
+
+instance MonadTrans (StateT s) where
+  lift m = StateT $
+    \s -> liftM ( \a -> (a, s) ) m
+
+instance MonadIO m => MonadIO (StateT s m) where
+  liftIO io = StateT $
+    \s -> liftM ( \a -> (a, s) ) ( liftIO io )
+
+embedded :: MaybeT (ExceptT String (ReaderT () IO)) Int
+embedded = MaybeT
+         $ ExceptT
+         $ ReaderT
+         $ return . const ( Right ( Just 1 ) )
