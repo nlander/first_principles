@@ -1,10 +1,12 @@
 module Main where
 
 import Control.Arrow
+import Control.Applicative
 import Control.Monad
 import Control.Monad.State.Lazy
 import Control.Monad.IO.Class
 import Data.Function
+import Data.Profunctor
 
 english :: Int -> String
 english 0 = "zero"
@@ -78,19 +80,19 @@ groovSnrrg = fmap head . replicateM 100 $
 
 counting :: StateT Int IO String
 counting = fmap head . replicateM counts $
-  state ( countBy stepSize & runKleisli ) >>= liftIO . print'
+  state ( countBy stepSize
+        & rmap (+1)
+        & runKleisli ) >>= liftIO . print'
 
-stateFunction :: s -> (a, s)
-
-print' a = putStrLn a >> return a
+print' = liftA2 (*>) putStrLn return
 
 countStart = 0
 
-stepSize = 11
+stepSize = 1
 
-counts = 89
+counts = 30
 
 main :: IO ()
 main = do
-  result <- execStateT groovSnrrg countStart
-  putStrLn ( groovSnrrgOut result )
+  result <- execStateT counting countStart
+  putStrLn ( english result )
